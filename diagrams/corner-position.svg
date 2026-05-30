@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-labelledby="title">
+  <title id="title">Position last layer corners</title>
+  <rect width="144" height="144" fill="white"/>
+  <rect x="21" y="21" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="55" y="21" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="89" y="21" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="21" y="55" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="55" y="55" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="89" y="55" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="21" y="89" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="55" y="89" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/><rect x="89" y="89" width="34" height="34" fill="#ffd33d" stroke="#15191f" stroke-width="2"/>
+  
+  
+    <path d="M 106.00 43.00 L 106.00 101.00" fill="none" stroke="#3151ad" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="106.00,32.00 101.50,43.00 110.50,43.00" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
+    <polygon points="106.00,112.00 101.50,101.00 110.50,101.00" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
+  
+</svg>
