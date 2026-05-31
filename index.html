@@ -264,16 +264,7 @@
       .player-dialog-header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 0.16in;
-      }
-
-      .player-dialog-title {
-        margin: 0;
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-        font-size: 0.17in;
-        font-weight: 800;
-        line-height: 1.2;
+        justify-content: flex-end;
       }
 
       .player-dialog-close {
@@ -692,10 +683,6 @@
         .player-dialog-inner {
           gap: 0.75rem;
           padding: 0.9rem;
-        }
-
-        .player-dialog-title {
-          font-size: 1rem;
         }
 
         .player-dialog-close {
@@ -1572,11 +1559,10 @@
     <dialog
       class="player-dialog"
       id="player-dialog"
-      aria-labelledby="player-dialog-title"
+      aria-label="AnimCube player"
     >
       <div class="player-dialog-inner">
         <div class="player-dialog-header">
-          <p class="player-dialog-title" id="player-dialog-title"></p>
           <button
             class="player-dialog-close"
             type="button"
@@ -1595,10 +1581,11 @@
     <script>
       const playerBaseParams = [
         "buttonbar=1",
-        "buttonheight=12",
+        "buttonheight=22",
+        "butsymbolscale=1.9",
         "sign=1",
         "movetext=5",
-        "textsize=10",
+        "textsize=18",
         "speed=8",
         "doublespeed=12",
         "snap=1",
@@ -1624,7 +1611,6 @@
       let activePlayer = null;
       const playerDialog = document.getElementById("player-dialog");
       const modalTarget = document.getElementById("modal-animcube-target");
-      const modalTitle = document.getElementById("player-dialog-title");
       const modalCloseButton = playerDialog.querySelector(
         ".player-dialog-close",
       );
@@ -1856,7 +1842,6 @@
       function resetPlayerDialog() {
         modalTarget.innerHTML = "";
         modalTarget.setAttribute("aria-hidden", "true");
-        modalTitle.textContent = "";
         activePlayer = null;
       }
 
@@ -1878,7 +1863,6 @@
         mount.id = id;
         modalTarget.append(mount);
         modalTarget.removeAttribute("aria-hidden");
-        modalTitle.textContent = move;
         activePlayer = player;
 
         const faceletMask =
