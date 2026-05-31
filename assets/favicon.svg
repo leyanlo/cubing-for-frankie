@@ -2,33 +2,36 @@
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 64 64"
   role="img"
-  aria-label="Rubik's cube"
+  aria-label="White daisy around the yellow center"
 >
   <rect width="64" height="64" rx="14" fill="#15191f" />
-  <g stroke="#15191f" stroke-width="2" stroke-linejoin="round">
-    <path d="M18 14h30v30H18z" fill="#ffffff" />
-    <path d="M18 14h10v10H18z" fill="#ffd447" />
-    <path d="M28 14h10v10H28z" fill="#3151ad" />
-    <path d="M38 14h10v10H38z" fill="#e00000" />
-    <path d="M18 24h10v10H18z" fill="#3151ad" />
-    <path d="M28 24h10v10H28z" fill="#ffffff" />
-    <path d="M38 24h10v10H38z" fill="#00a551" />
-    <path d="M18 34h10v10H18z" fill="#ff7a00" />
-    <path d="M28 34h10v10H28z" fill="#ffd447" />
-    <path d="M38 34h10v10H38z" fill="#ffffff" />
+  <path d="M14 24 32 13l18 11-18 11z" fill="#f7f9fb" />
+  <path d="M14 24v19l18 11V35z" fill="#3f73d8" />
+  <path d="M32 35v19l18-11V24z" fill="#df5a4f" />
+  <g stroke="#15191f" stroke-width="1.8" stroke-linejoin="round">
+    <path d="M14 24 32 13l18 11-18 11z" fill="#f7f9fb" />
+    <path d="M14 24v19l18 11V35z" fill="#3f73d8" />
+    <path d="M32 35v19l18-11V24z" fill="#df5a4f" />
   </g>
-  <path
-    d="M48 18l7 5v27l-7-6z"
-    fill="#00a551"
+  <g stroke="#15191f" stroke-width="1.15" stroke-linejoin="round">
+    <path d="M14 24 20 20.33l6 3.67-6 3.67z" fill="#cbd5e1" />
+    <path d="M20 20.33 26 16.67 32 20.33 26 24z" fill="#ffffff" />
+    <path d="M26 16.67 32 13 38 16.67 32 20.33z" fill="#cbd5e1" />
+    <path d="M20 27.67 26 24 32 27.67 26 31.33z" fill="#ffffff" />
+    <path d="M26 24 32 20.33 38 24 32 27.67z" fill="#ffd33d" />
+    <path d="M32 20.33 38 16.67 44 20.33 38 24z" fill="#ffffff" />
+    <path d="M26 31.33 32 27.67 38 31.33 32 35z" fill="#cbd5e1" />
+    <path d="M32 27.67 38 24 44 27.67 38 31.33z" fill="#ffffff" />
+    <path d="M38 24 44 20.33 50 24 44 27.67z" fill="#cbd5e1" />
+  </g>
+  <g
+    fill="none"
     stroke="#15191f"
-    stroke-width="2"
+    stroke-width="1.35"
     stroke-linejoin="round"
-  />
-  <path
-    d="M20 44h28l7 6H27z"
-    fill="#ff7a00"
-    stroke="#15191f"
-    stroke-width="2"
-    stroke-linejoin="round"
-  />
+    opacity="0.82"
+  >
+    <path d="M20 27.67v19M26 31.33v19M14 30.33l18 11M14 36.67l18 11" />
+    <path d="M38 31.33v19M44 27.67v19M32 41.33l18-11M32 47.67l18-11" />
+  </g>
 </svg>
