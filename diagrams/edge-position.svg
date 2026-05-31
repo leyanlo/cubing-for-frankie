@@ -6,19 +6,19 @@
   
   
       
-    <path d="M 37.00 72.00 L 64.22 44.78" fill="none" stroke="#3151ad" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 42.00 72.00 L 91.00 72.00" fill="none" stroke="#3151ad" stroke-width="4" stroke-linecap="round"/>
     
-    <polygon points="72.00,37.00 67.40,47.96 61.04,41.60" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
+    <polygon points="102.00,72.00 91.00,76.50 91.00,67.50" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
   
       
-    <path d="M 72.00 37.00 L 99.22 64.22" fill="none" stroke="#3151ad" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 103.00 76.00 L 83.78 95.22" fill="none" stroke="#3151ad" stroke-width="4" stroke-linecap="round"/>
     
-    <polygon points="107.00,72.00 96.04,67.40 102.40,61.04" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
+    <polygon points="76.00,103.00 80.60,92.04 86.96,98.40" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
   
       
-    <path d="M 107.00 72.00 L 48.00 72.00" fill="none" stroke="#3151ad" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 68.00 103.00 L 48.78 83.78" fill="none" stroke="#3151ad" stroke-width="4" stroke-linecap="round"/>
     
-    <polygon points="37.00,72.00 48.00,67.50 48.00,76.50" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
+    <polygon points="41.00,76.00 51.96,80.60 45.60,86.96" fill="#3151ad" stroke="#3151ad" stroke-linejoin="round"/>
   
     
 </svg>

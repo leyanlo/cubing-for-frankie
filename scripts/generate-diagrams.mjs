@@ -378,9 +378,9 @@ const faceFiles = {
     title: "Position last layer edges",
     cells: Array(9).fill(y),
     arrows: `
-      ${arrow({ x1: 37, y1: 72, x2: 72, y2: 37 })}
-      ${arrow({ x1: 72, y1: 37, x2: 107, y2: 72 })}
-      ${arrow({ x1: 107, y1: 72, x2: 37, y2: 72 })}
+      ${arrow({ x1: 42, y1: 72, x2: 102, y2: 72 })}
+      ${arrow({ x1: 103, y1: 76, x2: 76, y2: 103 })}
+      ${arrow({ x1: 68, y1: 103, x2: 41, y2: 76 })}
     `,
   }),
 };
