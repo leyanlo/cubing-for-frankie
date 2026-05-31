@@ -2,7 +2,7 @@
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1200 630"
   role="img"
-  aria-label="Cubing for Frankie daisy guide"
+  aria-label="Rubik’s Cube for Frankie daisy guide"
 >
   <defs>
     <filter id="shadow" x="-18%" y="-18%" width="136%" height="136%">
@@ -168,8 +168,8 @@
     </g>
   </g>
   <g font-family="Avenir, Trebuchet MS, Arial, sans-serif" fill="#15191f">
-    <text x="150" y="226" font-size="74" font-weight="800">
-      Cubing for Frankie
+    <text x="150" y="226" font-size="56" font-weight="800">
+      Rubik’s Cube for Frankie
     </text>
     <text x="154" y="302" font-size="34" font-weight="700" fill="#3f73d8">
       Printable beginner Rubik's Cube guide

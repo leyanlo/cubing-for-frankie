@@ -1,4 +1,4 @@
-# Cubing for Frankie
+# Rubik’s Cube for Frankie
 
 Printable HTML version of the two-page handwritten Rubik’s Cube guide, rebuilt with typed text, local SVG cube diagrams, and screen-only AnimCubeJS algorithm players.
 
