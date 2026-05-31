@@ -4,7 +4,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cubing for Frankie</title>
-    <link rel="icon" href="data:," />
+    <meta
+      name="description"
+      content="A printable beginner Rubik's Cube guide with typed steps, clear diagrams, and large AnimCube players."
+    />
+    <link rel="canonical" href="https://cubing-for-frankie.leyanlo.com/" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="theme-color" content="#15191f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cubing for Frankie" />
+    <meta property="og:title" content="Cubing for Frankie" />
+    <meta
+      property="og:description"
+      content="A printable beginner Rubik's Cube guide with typed steps, clear diagrams, and large AnimCube players."
+    />
+    <meta property="og:url" content="https://cubing-for-frankie.leyanlo.com/" />
+    <meta
+      property="og:image"
+      content="https://cubing-for-frankie.leyanlo.com/assets/share-thumbnail.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Cubing for Frankie printable beginner Rubik's Cube guide"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cubing for Frankie" />
+    <meta
+      name="twitter:description"
+      content="A printable beginner Rubik's Cube guide with typed steps, clear diagrams, and large AnimCube players."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cubing-for-frankie.leyanlo.com/assets/share-thumbnail.png"
+    />
     <script src="vendor/AnimCube3.js?v=2"></script>
     <style>
       @page {
@@ -264,7 +301,16 @@
       .player-dialog-header {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+        gap: 0.16in;
+      }
+
+      .player-dialog-title {
+        margin: 0;
+        color: inherit;
+        font-size: 0.18in;
+        font-weight: 800;
+        line-height: 1.2;
       }
 
       .player-dialog-close {
@@ -683,6 +729,10 @@
         .player-dialog-inner {
           gap: 0.75rem;
           padding: 0.9rem;
+        }
+
+        .player-dialog-title {
+          font-size: 1.08rem;
         }
 
         .player-dialog-close {
@@ -1130,7 +1180,11 @@
                   <p class="note">(Right kick)</p>
                 </div>
                 <div class="mini">
-                  <span class="cube-player" data-move="L' U' L">
+                  <span
+                    class="cube-player"
+                    data-move="L' U' L"
+                    data-position="lldd"
+                  >
                     <img
                       class="diagram"
                       src="diagrams/corner-left-slot.svg"
@@ -1194,7 +1248,11 @@
                   </div>
                 </div>
                 <div class="algorithm-line">
-                  <span class="cube-player" data-move="U' L' U' L y' U R U R'">
+                  <span
+                    class="cube-player"
+                    data-move="U' L' U' L y' U R U R'"
+                    data-position="lldd"
+                  >
                     <img
                       class="diagram"
                       src="diagrams/second-layer-left.svg"
@@ -1559,10 +1617,11 @@
     <dialog
       class="player-dialog"
       id="player-dialog"
-      aria-label="AnimCube player"
+      aria-labelledby="player-dialog-title"
     >
       <div class="player-dialog-inner">
         <div class="player-dialog-header">
+          <p class="player-dialog-title" id="player-dialog-title"></p>
           <button
             class="player-dialog-close"
             type="button"
@@ -1611,6 +1670,7 @@
       let activePlayer = null;
       const playerDialog = document.getElementById("player-dialog");
       const modalTarget = document.getElementById("modal-animcube-target");
+      const modalTitle = document.getElementById("player-dialog-title");
       const modalCloseButton = playerDialog.querySelector(
         ".player-dialog-close",
       );
@@ -1653,40 +1713,40 @@
         [
           "R U R'",
           facelets({
-            U: "....y...r",
+            U: "..r.y....",
             D: ".w.www.w.",
             F: "....bbb..",
             B: "....gg...",
             L: "....o..o.",
-            R: "....rrw..",
+            R: "w...rr...",
           }),
         ],
         [
           "L' U' L",
           facelets({
-            U: "....y.b..",
+            U: "r...y....",
             D: ".w.www.w.",
-            F: "r...rr...",
-            B: "....oo...",
-            L: "w...b..b.",
-            R: "....gg...",
+            F: "b...bb...",
+            B: "....gg...",
+            L: "w...r..r.",
+            R: "....oo...",
           }),
         ],
         [
           "R U2 R' U' R U R'",
           facelets({
-            U: "....y...w",
+            U: "..w.y....",
             D: ".w.www.w.",
             F: "....bbr..",
             B: "....gg...",
             L: "....o..o.",
-            R: "....rrb..",
+            R: "b...rr...",
           }),
         ],
         [
           "U R U R' y U' L' U' L",
           facelets({
-            U: "....y..r.",
+            U: ".r..y....",
             D: "wwwwwwwww",
             F: "..bbbb..b",
             B: "..g.gg..g",
@@ -1697,10 +1757,10 @@
         [
           "U' L' U' L y' U R U R'",
           facelets({
-            U: "....y..o.",
+            U: ".o..y....",
             D: "wwwwwwwww",
             F: "..bbbb..b",
-            B: "..g.gg.gg",
+            B: "..g.gg..g",
             L: "....o.ooo",
             R: "..r.rr..r",
           }),
@@ -1842,7 +1902,35 @@
       function resetPlayerDialog() {
         modalTarget.innerHTML = "";
         modalTarget.setAttribute("aria-hidden", "true");
+        modalTitle.textContent = "";
         activePlayer = null;
+      }
+
+      function playerDialogTitle(player) {
+        const labeledCase = player.closest(".edge-case, .corner-case");
+        const caseLabel = labeledCase?.querySelector(
+          ".edge-label, .corner-label",
+        );
+        if (caseLabel?.textContent.trim()) {
+          return caseLabel.textContent.trim();
+        }
+
+        const nearbyNote = player
+          .closest(".mini, .algorithm-line, .row")
+          ?.querySelector(".note")?.textContent;
+        if (nearbyNote?.trim()) {
+          return nearbyNote
+            .replace(/\s+/g, " ")
+            .trim()
+            .replace(/^\((.*)\)$/, "$1");
+        }
+
+        const sectionTitle = player.closest(".step")?.querySelector("h3");
+        if (sectionTitle?.textContent.trim()) {
+          return sectionTitle.textContent.trim();
+        }
+
+        return "AnimCube player";
       }
 
       function startPlayer(player) {
@@ -1863,6 +1951,7 @@
         mount.id = id;
         modalTarget.append(mount);
         modalTarget.removeAttribute("aria-hidden");
+        modalTitle.textContent = playerDialogTitle(player);
         activePlayer = player;
 
         const faceletMask =
@@ -1870,6 +1959,9 @@
           playerFacelets.get(move);
         const faceletParam = faceletMask
           ? `&facelets=${encodeURIComponent(faceletMask)}`
+          : "";
+        const positionParam = player.dataset.position
+          ? `&position=${encodeURIComponent(player.dataset.position)}`
           : "";
 
         if (
@@ -1882,7 +1974,7 @@
         }
 
         window.AnimCube3(
-          `id=${id}&move=${encodeURIComponent(move)}${faceletParam}&${[
+          `id=${id}&move=${encodeURIComponent(move)}${faceletParam}${positionParam}&${[
             ...playerBaseParams,
             ...playerThemeParams(),
           ].join("&")}`,

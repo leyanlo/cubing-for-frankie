@@ -16,7 +16,10 @@ const colors = {
 };
 
 function cellGrid(face) {
-  return Array.from({ length: 9 }, (_, index) => face?.[index] ?? colors.neutral);
+  return Array.from(
+    { length: 9 },
+    (_, index) => face?.[index] ?? colors.neutral,
+  );
 }
 
 function interp(a, b, t) {
@@ -30,7 +33,9 @@ function quadPoint(q, u, v) {
 }
 
 function polygon(points, fill, stroke = colors.dark, width = 1.7) {
-  const d = points.map((point) => `${point.x.toFixed(2)},${point.y.toFixed(2)}`).join(" ");
+  const d = points
+    .map((point) => `${point.x.toFixed(2)},${point.y.toFixed(2)}`)
+    .join(" ");
   return `<polygon points="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${width}" stroke-linejoin="round"/>`;
 }
 
@@ -66,14 +71,27 @@ function arrow({ x1, y1, x2, y2, color = colors.ink, heads = "end" }) {
   const headWidth = 9;
   const hasStartHead = heads === "both" || heads === "start";
   const hasEndHead = heads === "both" || heads === "end";
-  const startBase = hasStartHead ? { x: x1 + unit.x * headLength, y: y1 + unit.y * headLength } : { x: x1, y: y1 };
-  const endBase = hasEndHead ? { x: x2 - unit.x * headLength, y: y2 - unit.y * headLength } : { x: x2, y: y2 };
+  const startBase = hasStartHead
+    ? { x: x1 + unit.x * headLength, y: y1 + unit.y * headLength }
+    : { x: x1, y: y1 };
+  const endBase = hasEndHead
+    ? { x: x2 - unit.x * headLength, y: y2 - unit.y * headLength }
+    : { x: x2, y: y2 };
   const head = (tip, base) => [
     tip,
-    { x: base.x + perp.x * headWidth / 2, y: base.y + perp.y * headWidth / 2 },
-    { x: base.x - perp.x * headWidth / 2, y: base.y - perp.y * headWidth / 2 },
+    {
+      x: base.x + (perp.x * headWidth) / 2,
+      y: base.y + (perp.y * headWidth) / 2,
+    },
+    {
+      x: base.x - (perp.x * headWidth) / 2,
+      y: base.y - (perp.y * headWidth) / 2,
+    },
   ];
-  const polygonPoints = (points) => points.map((point) => `${point.x.toFixed(2)},${point.y.toFixed(2)}`).join(" ");
+  const polygonPoints = (points) =>
+    points
+      .map((point) => `${point.x.toFixed(2)},${point.y.toFixed(2)}`)
+      .join(" ");
   return `
     <path d="M ${startBase.x.toFixed(2)} ${startBase.y.toFixed(2)} L ${endBase.x.toFixed(2)} ${endBase.y.toFixed(2)}" fill="none" stroke="${color}" stroke-width="4" stroke-linecap="round"/>
     ${hasStartHead ? `<polygon points="${polygonPoints(head({ x: x1, y: y1 }, startBase))}" fill="${color}" stroke="${color}" stroke-linejoin="round"/>` : ""}
@@ -243,10 +261,12 @@ function sideMarks(names) {
     blLeft: { x: 12, y: 95, width: 7, height: 22 },
   };
 
-  return names.map((name) => {
-    const mark = marks[name];
-    return `<rect x="${mark.x}" y="${mark.y}" width="${mark.width}" height="${mark.height}" rx="3" fill="${colors.yellow}" stroke="${colors.dark}" stroke-width="1.4"/>`;
-  }).join("");
+  return names
+    .map((name) => {
+      const mark = marks[name];
+      return `<rect x="${mark.x}" y="${mark.y}" width="${mark.width}" height="${mark.height}" rx="3" fill="${colors.yellow}" stroke="${colors.dark}" stroke-width="1.4"/>`;
+    })
+    .join("");
 }
 
 const n = colors.neutral;
@@ -271,26 +291,26 @@ const cubeFiles = {
     front: [n, n, n, n, b, n, n, b, n],
     right: [n, n, n, n, r, n, n, r, n],
   }),
-  "corner-right-slot.svg": cubeBottomSvg({
+  "corner-right-slot.svg": cubeSvg({
     title: "White red blue corner in the right slot",
-    bottom: [n, w, gray, w, w, w, n, w, n],
+    top: [n, n, n, n, y, n, r, n, n],
     front: [n, n, b, n, b, n, n, b, gray],
     right: [w, n, n, n, r, n, gray, r, n],
-    arrows: arrow({ x1: 116.5, y1: 36, x2: 116.5, y2: 90 }),
+    arrows: arrow({ x1: 128, y1: 63, x2: 128, y2: 109 }),
   }),
-  "corner-left-slot.svg": cubeBottomLeftSvg({
+  "corner-left-slot.svg": cubeLeftSvg({
     title: "White red blue corner in the left slot",
-    bottom: [gray, w, n, w, w, w, n, w, n],
+    top: [n, n, n, n, y, n, r, n, n],
     front: [b, n, n, n, b, n, gray, b, n],
-    left: [w, n, n, n, r, n, gray, r, n],
-    arrows: arrow({ x1: 71.5, y1: 36, x2: 71.5, y2: 90 }),
+    left: [n, n, w, n, r, n, n, r, gray],
+    arrows: arrow({ x1: 61, y1: 63, x2: 61, y2: 109 }),
   }),
-  "corner-double-right-slot.svg": cubeBottomSvg({
+  "corner-double-right-slot.svg": cubeSvg({
     title: "White red blue corner for double right kick",
-    bottom: [n, w, gray, w, w, w, n, w, n],
+    top: [n, n, n, n, y, n, w, n, n],
     front: [n, n, r, n, b, n, n, b, gray],
     right: [b, n, n, n, r, n, gray, r, n],
-    arrows: arrow({ x1: 116.5, y1: 36, x2: 116.5, y2: 90 }),
+    arrows: arrow({ x1: 128, y1: 63, x2: 128, y2: 109 }),
   }),
   "second-layer-right.svg": cubeSvg({
     title: "Move an edge into the right side of the second layer",
@@ -384,9 +404,12 @@ await mkdir(outDir, { recursive: true });
 
 const selectedFiles = new Set(process.argv.slice(2));
 const allFiles = { ...cubeFiles, ...faceFiles };
-const filesToWrite = selectedFiles.size > 0
-  ? Object.fromEntries(Object.entries(allFiles).filter(([name]) => selectedFiles.has(name)))
-  : allFiles;
+const filesToWrite =
+  selectedFiles.size > 0
+    ? Object.fromEntries(
+        Object.entries(allFiles).filter(([name]) => selectedFiles.has(name)),
+      )
+    : allFiles;
 
 for (const [name, svg] of Object.entries(filesToWrite)) {
   await writeFile(new URL(name, outDir), svg, "utf8");
