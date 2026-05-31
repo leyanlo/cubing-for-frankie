@@ -426,10 +426,10 @@
       .corner-flow-arrow {
         position: absolute;
         width: var(--arrow-width);
-        height: 0.2in;
+        height: var(--arrow-height, 0.2in);
         color: #3151ad;
         transform: translate(var(--arrow-x), var(--arrow-y)) rotate(var(--arrow-rotate, 0deg));
-        transform-origin: 0.1in 0.1in;
+        transform-origin: var(--arrow-origin, 0.1in) var(--arrow-origin, 0.1in);
         pointer-events: none;
       }
 
@@ -440,49 +440,55 @@
       }
 
       .corner-flow-arrow:nth-child(1) {
-        --arrow-x: 0.895in;
+        --arrow-x: 1in;
         --arrow-y: 0.36in;
-        --arrow-width: 0.52in;
+        --arrow-width: 0.22in;
+        --arrow-height: 0.22in;
+        --arrow-origin: 0.11in;
       }
 
       .corner-flow-arrow:nth-child(2) {
-        --arrow-x: 2.2in;
+        --arrow-x: 2.305in;
         --arrow-y: 0.36in;
-        --arrow-width: 0.52in;
+        --arrow-width: 0.22in;
+        --arrow-height: 0.22in;
+        --arrow-origin: 0.11in;
       }
 
       .corner-flow-arrow:nth-child(3) {
-        --arrow-x: 3.5in;
+        --arrow-x: 3.605in;
         --arrow-y: 0.36in;
-        --arrow-width: 0.52in;
+        --arrow-width: 0.22in;
+        --arrow-height: 0.22in;
+        --arrow-origin: 0.11in;
       }
 
       .corner-flow-arrow:nth-child(4) {
-        --arrow-x: 1.18in;
-        --arrow-y: 1.55in;
-        --arrow-width: 0.78in;
-        --arrow-rotate: -78deg;
+        --arrow-x: 0.8in;
+        --arrow-y: 1.15in;
+        --arrow-width: 0.86in;
+        --arrow-rotate: -45deg;
       }
 
       .corner-flow-arrow:nth-child(5) {
-        --arrow-x: 0.72in;
-        --arrow-y: 2.55in;
-        --arrow-width: 2.25in;
-        --arrow-rotate: -74deg;
+        --arrow-x: 0.55in;
+        --arrow-y: 2.5in;
+        --arrow-width: 2.48in;
+        --arrow-rotate: -66deg;
       }
 
       .corner-flow-arrow:nth-child(6) {
-        --arrow-x: 2.48in;
-        --arrow-y: 1.55in;
-        --arrow-width: 0.78in;
-        --arrow-rotate: -78deg;
+        --arrow-x: 2.1in;
+        --arrow-y: 1.15in;
+        --arrow-width: 0.86in;
+        --arrow-rotate: -45deg;
       }
 
       .corner-flow-arrow:nth-child(7) {
-        --arrow-x: 2.02in;
-        --arrow-y: 2.55in;
-        --arrow-width: 2.25in;
-        --arrow-rotate: -74deg;
+        --arrow-x: 1.85in;
+        --arrow-y: 2.5in;
+        --arrow-width: 2.48in;
+        --arrow-rotate: -66deg;
       }
 
       .arrow {
@@ -756,8 +762,8 @@
         }
 
         .corner-flow-arrow {
-          height: 1.1rem;
-          transform-origin: 0.55rem 0.55rem;
+          --arrow-height: 1.1rem;
+          --arrow-origin: 0.55rem;
         }
 
         .corner-case-arrows {
@@ -768,47 +774,53 @@
         .corner-flow-arrow:nth-child(1) {
           --arrow-x: 2.55rem;
           --arrow-y: 0.78rem;
-          --arrow-width: 1.65rem;
+          --arrow-width: 1.15rem;
+          --arrow-height: 1.15rem;
+          --arrow-origin: 0.575rem;
         }
 
         .corner-flow-arrow:nth-child(2) {
           --arrow-x: 6rem;
           --arrow-y: 0.78rem;
-          --arrow-width: 1.65rem;
+          --arrow-width: 1.15rem;
+          --arrow-height: 1.15rem;
+          --arrow-origin: 0.575rem;
         }
 
         .corner-flow-arrow:nth-child(3) {
           --arrow-x: 9.45rem;
           --arrow-y: 0.78rem;
-          --arrow-width: 1.65rem;
+          --arrow-width: 1.15rem;
+          --arrow-height: 1.15rem;
+          --arrow-origin: 0.575rem;
         }
 
         .corner-flow-arrow:nth-child(4) {
-          --arrow-x: 3.35rem;
-          --arrow-y: 3.9rem;
-          --arrow-width: 2rem;
-          --arrow-rotate: -78deg;
+          --arrow-x: 2.35rem;
+          --arrow-y: 3.37rem;
+          --arrow-width: 2.52rem;
+          --arrow-rotate: -45deg;
         }
 
         .corner-flow-arrow:nth-child(5) {
-          --arrow-x: 1.8rem;
-          --arrow-y: 6.95rem;
-          --arrow-width: 5.3rem;
-          --arrow-rotate: -74deg;
+          --arrow-x: 1.5rem;
+          --arrow-y: 6.8rem;
+          --arrow-width: 5.8rem;
+          --arrow-rotate: -66deg;
         }
 
         .corner-flow-arrow:nth-child(6) {
-          --arrow-x: 6.85rem;
-          --arrow-y: 3.9rem;
-          --arrow-width: 2rem;
-          --arrow-rotate: -78deg;
+          --arrow-x: 5.85rem;
+          --arrow-y: 3.37rem;
+          --arrow-width: 2.52rem;
+          --arrow-rotate: -45deg;
         }
 
         .corner-flow-arrow:nth-child(7) {
-          --arrow-x: 5.3rem;
-          --arrow-y: 6.95rem;
-          --arrow-width: 5.3rem;
-          --arrow-rotate: -74deg;
+          --arrow-x: 5rem;
+          --arrow-y: 6.8rem;
+          --arrow-width: 5.8rem;
+          --arrow-rotate: -66deg;
         }
 
         .print-button {
@@ -850,8 +862,8 @@
         }
 
         .corner-flow-arrow {
-          height: 1rem;
-          transform-origin: 0.5rem 0.5rem;
+          --arrow-height: 1rem;
+          --arrow-origin: 0.5rem;
         }
 
         .corner-case-arrows {
@@ -862,47 +874,53 @@
         .corner-flow-arrow:nth-child(1) {
           --arrow-x: 2.3rem;
           --arrow-y: 0.7rem;
-          --arrow-width: 1.45rem;
+          --arrow-width: 1.15rem;
+          --arrow-height: 1.15rem;
+          --arrow-origin: 0.575rem;
         }
 
         .corner-flow-arrow:nth-child(2) {
           --arrow-x: 5.35rem;
           --arrow-y: 0.7rem;
-          --arrow-width: 1.45rem;
+          --arrow-width: 1.15rem;
+          --arrow-height: 1.15rem;
+          --arrow-origin: 0.575rem;
         }
 
         .corner-flow-arrow:nth-child(3) {
           --arrow-x: 8.4rem;
           --arrow-y: 0.7rem;
-          --arrow-width: 1.45rem;
+          --arrow-width: 1.15rem;
+          --arrow-height: 1.15rem;
+          --arrow-origin: 0.575rem;
         }
 
         .corner-flow-arrow:nth-child(4) {
-          --arrow-x: 3rem;
-          --arrow-y: 3.5rem;
-          --arrow-width: 1.8rem;
-          --arrow-rotate: -78deg;
+          --arrow-x: 2.13rem;
+          --arrow-y: 3.06rem;
+          --arrow-width: 2.29rem;
+          --arrow-rotate: -45deg;
         }
 
         .corner-flow-arrow:nth-child(5) {
-          --arrow-x: 1.6rem;
-          --arrow-y: 6.25rem;
-          --arrow-width: 4.75rem;
-          --arrow-rotate: -74deg;
+          --arrow-x: 1.38rem;
+          --arrow-y: 6.1rem;
+          --arrow-width: 5.25rem;
+          --arrow-rotate: -66deg;
         }
 
         .corner-flow-arrow:nth-child(6) {
-          --arrow-x: 6.2rem;
-          --arrow-y: 3.5rem;
-          --arrow-width: 1.8rem;
-          --arrow-rotate: -78deg;
+          --arrow-x: 5.27rem;
+          --arrow-y: 3.06rem;
+          --arrow-width: 2.29rem;
+          --arrow-rotate: -45deg;
         }
 
         .corner-flow-arrow:nth-child(7) {
-          --arrow-x: 4.7rem;
-          --arrow-y: 6.25rem;
-          --arrow-width: 4.75rem;
-          --arrow-rotate: -74deg;
+          --arrow-x: 4.5rem;
+          --arrow-y: 6.1rem;
+          --arrow-width: 5.25rem;
+          --arrow-rotate: -66deg;
         }
       }
 
@@ -1138,13 +1156,13 @@
               <h3>Orient Corners</h3>
               <div class="corner-cases" aria-label="Seven possible corner orientation cases">
                 <span class="corner-case-arrows" aria-hidden="true">
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="34"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="34"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="34"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="55"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="118"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="55"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="118"></span>
+                  <span class="corner-flow-arrow" data-arrow data-arrow-width="24"></span>
+                  <span class="corner-flow-arrow" data-arrow data-arrow-width="24"></span>
+                  <span class="corner-flow-arrow" data-arrow data-arrow-width="24"></span>
+                  <span class="corner-flow-arrow" data-arrow data-arrow-width="61"></span>
+                  <span class="corner-flow-arrow" data-arrow data-arrow-width="130"></span>
+                  <span class="corner-flow-arrow" data-arrow data-arrow-width="61"></span>
+                  <span class="corner-flow-arrow" data-arrow data-arrow-width="130"></span>
                 </span>
                 <div class="corner-case">
                   <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-hammer-t">
