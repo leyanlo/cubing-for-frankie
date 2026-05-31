@@ -1691,6 +1691,10 @@
       ];
 
       let activePlayer = null;
+      let activeAnimCubeId = null;
+      var acjs_removeListeners = window.acjs_removeListeners || [];
+      window.acjs_removeListeners = acjs_removeListeners;
+
       const playerDialog = document.getElementById("player-dialog");
       const modalTarget = document.getElementById("modal-animcube-target");
       const modalTitle = document.getElementById("player-dialog-title");
@@ -1923,6 +1927,16 @@
       ]);
 
       function resetPlayerDialog() {
+        if (
+          activeAnimCubeId &&
+          window.acjs_removeListeners?.[activeAnimCubeId]
+        ) {
+          window.acjs_removeListeners[activeAnimCubeId]();
+          delete window.acjs_removeListeners[activeAnimCubeId];
+        }
+
+        activeAnimCubeId = null;
+        document.body.style.overflow = "";
         modalTarget.innerHTML = "";
         modalTarget.setAttribute("aria-hidden", "true");
         modalTitle.textContent = "";
@@ -1972,6 +1986,7 @@
         const mount = document.createElement("div");
         mount.className = "modal-animcube-player";
         mount.id = id;
+        activeAnimCubeId = id;
         modalTarget.append(mount);
         modalTarget.removeAttribute("aria-hidden");
         modalTitle.textContent = playerDialogTitle(player);
