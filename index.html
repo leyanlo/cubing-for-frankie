@@ -116,6 +116,12 @@
         overflow: hidden;
       }
 
+      @media screen {
+        .sheet {
+          padding: clamp(0.75rem, 3vw, 2.5rem);
+        }
+      }
+
       .sheet-header {
         display: flex;
         align-items: start;
@@ -629,7 +635,7 @@
         height: 100%;
       }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 820px) {
         html,
         body {
           background: #fff;
@@ -644,7 +650,6 @@
           width: 100%;
           height: auto;
           margin: 0 0 0.75rem;
-          padding: 1rem;
           overflow: visible;
           box-shadow: none;
         }
@@ -923,10 +928,6 @@
       @media screen and (max-width: 380px) {
         main {
           padding: 0.5rem;
-        }
-
-        .sheet {
-          padding: 0.75rem;
         }
 
         .step {
