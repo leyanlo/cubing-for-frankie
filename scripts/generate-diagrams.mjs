@@ -120,7 +120,7 @@ function cubeSvg({ title, top, front, right, arrows = "" }) {
   ];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 150" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="34 6 144 144" role="img" aria-labelledby="title">
   <title id="title">${title}</title>
   <path d="M55 123h66l36-24V33H91L55 57z" fill="#000" opacity="0.04"/>
   ${drawFace(topQuad, top)}
@@ -152,7 +152,7 @@ function cubeLeftSvg({ title, top, front, left, arrows = "" }) {
   ];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 150" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 6 144 144" role="img" aria-labelledby="title">
   <title id="title">${title}</title>
   <path d="M67 123h66V57L97 33H31v66z" fill="#000" opacity="0.04"/>
   ${drawFace(topQuad, top)}
@@ -185,7 +185,7 @@ function cubeBottomSvg({ title, bottom, front, right, arrows = "" }) {
   ];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 150" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="24 -5 144 144" role="img" aria-labelledby="title">
   <title id="title">${title}</title>
   <path d="M44 22h66l38 24v66H82L44 88z" fill="#000" opacity="0.04"/>
   ${drawFace(frontQuad, front)}
@@ -218,7 +218,7 @@ function cubeBottomLeftSvg({ title, bottom, front, left, arrows = "" }) {
   ];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 150" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -5 144 144" role="img" aria-labelledby="title">
   <title id="title">${title}</title>
   <path d="M78 22h66v66l-38 24H40V46z" fill="#000" opacity="0.04"/>
   ${drawFace(leftQuad, left)}
