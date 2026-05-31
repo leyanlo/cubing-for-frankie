@@ -11,3 +11,19 @@ node scripts/generate-diagrams.mjs
 ```
 
 The algorithm player script is vendored at `vendor/AnimCube3.js`.
+
+## Deploying
+
+This repo is set up for GitHub Pages with GitHub Actions. On each push to `main`,
+`.github/workflows/pages.yml` uploads the static site and deploys it to Pages.
+
+Use `cubing-for-frankie.leyanlo.com` as the Pages custom domain. In DNS, create a
+`CNAME` record:
+
+```txt
+cubing-for-frankie.leyanlo.com -> leyanlo.github.io
+```
+
+In the GitHub repo settings, set **Pages > Build and deployment > Source** to
+**GitHub Actions**. After the first deploy, GitHub should read the root `CNAME`
+file and attach the custom domain.
