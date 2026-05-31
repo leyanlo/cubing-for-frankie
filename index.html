@@ -1324,17 +1324,6 @@
         ].join("");
       }
 
-      function lastLayerFacelets(faces) {
-        return facelets({
-          D: "wwwwwwwww",
-          F: ".........",
-          B: ".........",
-          L: ".........",
-          R: ".........",
-          ...faces,
-        });
-      }
-
       const playerFacelets = new Map([
         ["R U R'", facelets({
           U: "....y....",
@@ -1376,59 +1365,88 @@
           L: "...gg.ggg",
           R: ".bb.bb..b",
         })],
-        ["oll-dot", lastLayerFacelets({
-          U: "....y....",
+        ["oll-dot", facelets({
+          D: "wwwwwwwww",
+          U: ".y..yy...",
+          F: ".oo.oo.oo",
+          B: ".rryrr.rr",
+          L: ".y.gggggg",
+          R: ".bb.bb.bb",
         })],
-        ["oll-j", lastLayerFacelets({
-          U: ".y.yy....",
-        })],
-        ["oll-bar", lastLayerFacelets({
+        ["oll-j", facelets({
+          D: "wwwwwwwww",
           U: "...yyy...",
+          F: ".ooyoo.oo",
+          B: ".rryrr.rr",
+          L: "...gggggg",
+          R: ".bb.bb.bb",
         })],
-        ["oll-cross", lastLayerFacelets({
+        ["oll-bar", facelets({
+          D: "wwwwwwwww",
           U: ".y.yyy.y.",
+          F: ".oo.oo.oo",
+          B: ".rr.rr.rr",
+          L: "...gggggg",
+          R: ".bb.bb.bb",
         })],
-        ["ocll-fish-sune", lastLayerFacelets({
+        ["oll-cross", facelets({
+          D: "wwwwwwwww",
+          U: ".y.yyy.y.",
+          F: ".oo.oo.oo",
+          B: ".rryrr.rr",
+          L: ".y.gggggg",
+          R: ".bb.bb.bb",
+        })],
+        ["ocll-fish-sune", facelets({
+          D: "wwwwwwwww",
           U: ".y.yyyyy.",
           B: "..y......",
           L: "..y......",
           R: "......y..",
         })],
-        ["ocll-fish-anti", lastLayerFacelets({
+        ["ocll-fish-anti", facelets({
+          D: "wwwwwwwww",
           U: ".y.yyy.yy",
           B: "y........",
           L: "......y..",
           R: "..y......",
         })],
-        ["ocll-cross-h", lastLayerFacelets({
+        ["ocll-cross-h", facelets({
+          D: "wwwwwwwww",
           U: ".y.yyy.y.",
           F: "y.......y",
           B: "y.y......",
         })],
-        ["ocll-cross-pi", lastLayerFacelets({
+        ["ocll-cross-pi", facelets({
+          D: "wwwwwwwww",
           U: ".y.yyy.y.",
           L: "..y.....y",
           R: "..y...y..",
         })],
-        ["ocll-hammer-t", lastLayerFacelets({
+        ["ocll-hammer-t", facelets({
+          D: "wwwwwwwww",
           U: "yyyyyy.y.",
           F: "......y..",
           L: "......y..",
         })],
-        ["ocll-hammer-u", lastLayerFacelets({
+        ["ocll-hammer-u", facelets({
+          D: "wwwwwwwww",
           U: ".y.yyyyyy",
           L: "..y......",
           R: "..y......",
         })],
-        ["ocll-double-fish", lastLayerFacelets({
+        ["ocll-double-fish", facelets({
+          D: "wwwwwwwww",
           U: "yy.yyy.yy",
           B: "..y......",
           F: "......y..",
         })],
-        ["corner-position", lastLayerFacelets({
+        ["corner-position", facelets({
+          D: "wwwwwwwww",
           U: "yyyyyyyyy",
         })],
-        ["edge-position", lastLayerFacelets({
+        ["edge-position", facelets({
+          D: "wwwwwwwww",
           U: "yyyyyyyyy",
         })],
       ]);
