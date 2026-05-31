@@ -126,10 +126,19 @@
         padding-bottom: 0.08in;
       }
 
-      .sheet-header h2 {
+      .sheet-title h1,
+      .sheet-title h2 {
         margin: 0;
-        font-size: 0.28in;
         line-height: 1.05;
+      }
+
+      .sheet-title h1 {
+        font-size: 0.24in;
+      }
+
+      .sheet-title h2 {
+        margin-top: 0.02in;
+        font-size: 0.17in;
       }
 
       .date {
@@ -198,6 +207,10 @@
         display: flex;
         align-items: center;
         gap: 0.16in;
+      }
+
+      .row.no-gap {
+        gap: 0;
       }
 
       .diagram {
@@ -395,7 +408,7 @@
         grid-template-columns: repeat(4, 0.92in);
         gap: 0.08in 0.38in;
         width: max-content;
-        margin-bottom: 0.09in;
+        margin-bottom: 0.14in;
       }
 
       .corner-case {
@@ -582,6 +595,7 @@
         color: #445160;
         font-size: 0.118in;
         line-height: 1.25;
+        text-wrap: balance;
       }
 
       .mini-grid {
@@ -594,6 +608,7 @@
       .mini {
         display: flex;
         flex-direction: column;
+        align-items: center;
         min-width: 0;
       }
 
@@ -654,8 +669,14 @@
           padding-bottom: 0.55rem;
         }
 
-        .sheet-header h2 {
+        .sheet-title h1 {
           font-size: 1.35rem;
+          line-height: 1.12;
+        }
+
+        .sheet-title h2 {
+          margin-top: 0.2rem;
+          font-size: 1.05rem;
           line-height: 1.12;
         }
 
@@ -680,6 +701,13 @@
           column-gap: 0.6rem;
         }
 
+        .step > h3 ~ :not(.number) {
+          grid-column: 1 / -1;
+          align-items: center;
+          justify-self: center;
+          max-width: 100%;
+        }
+
         .step.extra-bottom {
           margin-bottom: 0;
         }
@@ -700,6 +728,7 @@
           align-items: flex-start;
           flex-wrap: wrap;
           gap: 0.7rem;
+          justify-content: center;
         }
 
         .diagram {
@@ -764,14 +793,16 @@
 
         .algorithm-line {
           grid-template-columns: 1fr;
-          justify-items: start;
           gap: 0.45rem;
+          justify-items: center;
+          text-align: center;
         }
 
         .algo {
           max-width: 100%;
           font-size: 1.02rem;
           overflow-wrap: anywhere;
+          text-align: center;
         }
 
         .note {
@@ -960,12 +991,6 @@
         }
       }
 
-      @media print, screen and (min-width: 701px) {
-        .mini {
-          align-items: center;
-        }
-      }
-
       @media screen and (prefers-color-scheme: dark) {
         html,
         body {
@@ -1123,7 +1148,10 @@
     <main>
       <section class="sheet" aria-label="First two layers">
         <header class="sheet-header">
-          <h2>Rubik’s Cube First Two Layers for Frankie</h2>
+          <div class="sheet-title">
+            <h1>Rubik’s cube for Frankie</h1>
+            <h2>First Two Layers</h2>
+          </div>
           <div class="date">3/7/26</div>
         </header>
 
@@ -1139,7 +1167,7 @@
           <section class="step">
             <div class="number">1</div>
             <h3>Daisy</h3>
-            <div class="row">
+            <div class="row no-gap">
               <img
                 class="diagram"
                 src="diagrams/daisy.svg"
@@ -1152,7 +1180,7 @@
           <section class="step">
             <div class="number">2</div>
             <h3>Cross</h3>
-            <div class="row">
+            <div class="row no-gap">
               <img
                 class="diagram"
                 src="diagrams/cross.svg"
@@ -1282,7 +1310,9 @@
 
       <section class="sheet last-layer" aria-label="Last layer">
         <header class="sheet-header">
-          <h2>Rubik’s Cube Last Layer for Frankie</h2>
+          <div class="sheet-title">
+            <h2>Last Layer</h2>
+          </div>
         </header>
 
         <div class="steps">
