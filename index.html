@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cubing for Frankie</title>
-    <link rel="icon" href="data:,">
+    <link rel="icon" href="data:," />
     <script src="vendor/AnimCube3.js?v=2"></script>
     <style>
       @page {
@@ -206,7 +206,9 @@
         border-radius: 50%;
         background: rgba(21, 25, 31, 0.72);
         color: #fff;
-        font: 700 0.16in/1 Arial, sans-serif;
+        font:
+          700 0.16in/1 Arial,
+          sans-serif;
         box-shadow: 0 0.04in 0.12in rgba(21, 25, 31, 0.24);
         cursor: pointer;
       }
@@ -428,7 +430,8 @@
         width: var(--arrow-width);
         height: var(--arrow-height, 0.2in);
         color: #3151ad;
-        transform: translate(var(--arrow-x), var(--arrow-y)) rotate(var(--arrow-rotate, 0deg));
+        transform: translate(var(--arrow-x), var(--arrow-y))
+          rotate(var(--arrow-rotate, 0deg));
         transform-origin: var(--arrow-origin, 0.1in) var(--arrow-origin, 0.1in);
         pointer-events: none;
       }
@@ -977,11 +980,27 @@
     </style>
   </head>
   <body>
-    <button class="print-button" type="button" onclick="window.print()" aria-label="Print">
-      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 9V2h12v7"/>
-        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-        <path d="M6 14h12v8H6z"/>
+    <button
+      class="print-button"
+      type="button"
+      onclick="window.print()"
+      aria-label="Print"
+    >
+      <svg
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M6 9V2h12v7" />
+        <path
+          d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
+        />
+        <path d="M6 14h12v8H6z" />
       </svg>
     </button>
 
@@ -994,7 +1013,10 @@
 
         <section class="notation" aria-label="Notation">
           <strong>Notation:</strong>
-          U = up, R = right, L = left, F = front. M is the middle slice between L and R, turning like L. An apostrophe means counter-clockwise, 2 means turn twice, and y means rotate the whole cube clockwise about the up axis.
+          U = up, R = right, L = left, F = front. M is the middle slice between
+          L and R, turning like L. An apostrophe means counter-clockwise, 2
+          means turn twice, and y means rotate the whole cube clockwise about
+          the up axis.
         </section>
 
         <div class="steps">
@@ -1003,7 +1025,11 @@
             <div>
               <h3>Daisy</h3>
               <div class="row">
-                <img class="diagram" src="diagrams/daisy.svg" alt="White daisy around the yellow center">
+                <img
+                  class="diagram"
+                  src="diagrams/daisy.svg"
+                  alt="White daisy around the yellow center"
+                />
                 <p class="note">Make white petals around the yellow center.</p>
               </div>
             </div>
@@ -1014,8 +1040,14 @@
             <div>
               <h3>Cross</h3>
               <div class="row">
-                <img class="diagram" src="diagrams/cross.svg" alt="White cross with side colors matched">
-                <p class="note">Turn each petal down after its side color matches.</p>
+                <img
+                  class="diagram"
+                  src="diagrams/cross.svg"
+                  alt="White cross with side colors matched"
+                />
+                <p class="note">
+                  Turn each petal down after its side color matches.
+                </p>
               </div>
             </div>
           </section>
@@ -1027,9 +1059,23 @@
               <div class="mini-grid">
                 <div class="mini">
                   <span class="cube-player" data-move="R U R'">
-                    <img class="diagram" src="diagrams/corner-right-slot.svg" alt="Right corner insert diagram">
-                    <button class="play-overlay" type="button" aria-label="Play R U R'"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                    <img
+                      class="diagram"
+                      src="diagrams/corner-right-slot.svg"
+                      alt="Right corner insert diagram"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play R U R'"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <p class="algo">R U R'</p>
@@ -1037,9 +1083,23 @@
                 </div>
                 <div class="mini">
                   <span class="cube-player" data-move="L' U' L">
-                    <img class="diagram" src="diagrams/corner-left-slot.svg" alt="Left corner insert diagram">
-                    <button class="play-overlay" type="button" aria-label="Play L' U' L"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                    <img
+                      class="diagram"
+                      src="diagrams/corner-left-slot.svg"
+                      alt="Left corner insert diagram"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play L' U' L"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <p class="algo">L' U' L</p>
@@ -1047,13 +1107,29 @@
                 </div>
                 <div class="mini">
                   <span class="cube-player" data-move="R U2 R' U' R U R'">
-                    <img class="diagram" src="diagrams/corner-double-right-slot.svg" alt="Repeated corner insert diagram">
-                    <button class="play-overlay" type="button" aria-label="Play R U2 R' U' R U R'"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                    <img
+                      class="diagram"
+                      src="diagrams/corner-double-right-slot.svg"
+                      alt="Repeated corner insert diagram"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play R U2 R' U' R U R'"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <p class="algo">R U2 R' U' R U R'</p>
-                  <p class="note">(Double right kick, left trigger, right kick)</p>
+                  <p class="note">
+                    (Double right kick, left trigger, right kick)
+                  </p>
                 </div>
               </div>
             </div>
@@ -1066,33 +1142,66 @@
               <div class="algorithm-list">
                 <div class="algorithm-line">
                   <span class="cube-player" data-move="U R U R' y U' L' U' L">
-                    <img class="diagram" src="diagrams/second-layer-right.svg" alt="Right-side second layer insert">
-                    <button class="play-overlay" type="button" aria-label="Play U R U R' y U' L' U' L"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                    <img
+                      class="diagram"
+                      src="diagrams/second-layer-right.svg"
+                      alt="Right-side second layer insert"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play U R U R' y U' L' U' L"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <div>
                     <p class="algo">U R U R' y U' L' U' L</p>
-                    <p class="note">(Right trigger, right kick, hold right, left trigger, left kick)</p>
+                    <p class="note">
+                      (Right trigger, right kick, hold right, left trigger, left
+                      kick)
+                    </p>
                   </div>
                 </div>
                 <div class="algorithm-line">
                   <span class="cube-player" data-move="U' L' U' L y' U R U R'">
-                    <img class="diagram" src="diagrams/second-layer-left.svg" alt="Left-side second layer insert">
-                    <button class="play-overlay" type="button" aria-label="Play U' L' U' L y' U R U R'"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                    <img
+                      class="diagram"
+                      src="diagrams/second-layer-left.svg"
+                      alt="Left-side second layer insert"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play U' L' U' L y' U R U R'"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <div>
                     <p class="algo">U' L' U' L y' U R U R'</p>
-                    <p class="note">(Left trigger, left kick, hold left, right trigger, right kick)</p>
+                    <p class="note">
+                      (Left trigger, left kick, hold left, right trigger, right
+                      kick)
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
         </div>
-
       </section>
 
       <section class="sheet last-layer" aria-label="Last layer">
@@ -1107,37 +1216,95 @@
               <h3>Orient Edges</h3>
               <div class="sequence">
                 <span class="edge-case">
-                  <span class="cube-player face" data-move="F R U R' U' F'" data-facelets-key="oll-dot">
-                    <img class="diagram face" src="diagrams/oll-dot.svg" alt="Dot edge orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play dot edge orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="F R U R' U' F'"
+                    data-facelets-key="oll-dot"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/oll-dot.svg"
+                      alt="Dot edge orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play dot edge orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="edge-label">Dot</span>
                 </span>
                 <span class="arrow" aria-hidden="true" data-arrow></span>
                 <span class="edge-case">
-                  <span class="cube-player face" data-move="F R U R' U' F'" data-facelets-key="oll-j">
-                    <img class="diagram face" src="diagrams/oll-l.svg" alt="J-shape edge orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play J-shape edge orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="F R U R' U' F'"
+                    data-facelets-key="oll-j"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/oll-l.svg"
+                      alt="J-shape edge orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play J-shape edge orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="edge-label">J-shape</span>
                 </span>
                 <span class="arrow" aria-hidden="true" data-arrow></span>
                 <span class="edge-case">
-                  <span class="cube-player face" data-move="F R U R' U' F'" data-facelets-key="oll-bar">
-                    <img class="diagram face" src="diagrams/oll-line.svg" alt="Bar edge orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play Bar edge orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="F R U R' U' F'"
+                    data-facelets-key="oll-bar"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/oll-line.svg"
+                      alt="Bar edge orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play Bar edge orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="edge-label">Bar</span>
                 </span>
                 <span class="arrow" aria-hidden="true" data-arrow></span>
                 <span class="edge-case">
-                  <img class="diagram face" src="diagrams/oll-cross.svg" alt="Cross edge orientation case">
+                  <img
+                    class="diagram face"
+                    src="diagrams/oll-cross.svg"
+                    alt="Cross edge orientation case"
+                  />
                   <span class="edge-label">Cross</span>
                 </span>
               </div>
@@ -1149,79 +1316,240 @@
             <div class="number">2</div>
             <div>
               <h3>Orient Corners</h3>
-              <div class="corner-cases" aria-label="Seven possible corner orientation cases">
+              <div
+                class="corner-cases"
+                aria-label="Seven possible corner orientation cases"
+              >
                 <span class="corner-case-arrows" aria-hidden="true">
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="24"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="24"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="24"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="61"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="130"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="61"></span>
-                  <span class="corner-flow-arrow" data-arrow data-arrow-width="130"></span>
+                  <span
+                    class="corner-flow-arrow"
+                    data-arrow
+                    data-arrow-width="24"
+                  ></span>
+                  <span
+                    class="corner-flow-arrow"
+                    data-arrow
+                    data-arrow-width="24"
+                  ></span>
+                  <span
+                    class="corner-flow-arrow"
+                    data-arrow
+                    data-arrow-width="24"
+                  ></span>
+                  <span
+                    class="corner-flow-arrow"
+                    data-arrow
+                    data-arrow-width="61"
+                  ></span>
+                  <span
+                    class="corner-flow-arrow"
+                    data-arrow
+                    data-arrow-width="130"
+                  ></span>
+                  <span
+                    class="corner-flow-arrow"
+                    data-arrow
+                    data-arrow-width="61"
+                  ></span>
+                  <span
+                    class="corner-flow-arrow"
+                    data-arrow
+                    data-arrow-width="130"
+                  ></span>
                 </span>
                 <div class="corner-case">
-                  <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-hammer-t">
-                    <img class="diagram face" src="diagrams/corner-orient-t.svg" alt="T corner orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play T corner orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="R U R' U R U2 R'"
+                    data-facelets-key="ocll-hammer-t"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/corner-orient-t.svg"
+                      alt="T corner orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play T corner orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="corner-label">Hammer</span>
                 </div>
                 <div class="corner-case">
-                  <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-fish-sune">
-                    <img class="diagram face" src="diagrams/corner-orient-sune.svg" alt="Sune corner orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play Sune corner orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="R U R' U R U2 R'"
+                    data-facelets-key="ocll-fish-sune"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/corner-orient-sune.svg"
+                      alt="Sune corner orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play Sune corner orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="corner-label">Fish</span>
                 </div>
                 <div class="corner-case">
-                  <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-fish-anti">
-                    <img class="diagram face" src="diagrams/corner-orient-antisune.svg" alt="Anti-Sune corner orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play Anti-Sune corner orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="R U R' U R U2 R'"
+                    data-facelets-key="ocll-fish-anti"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/corner-orient-antisune.svg"
+                      alt="Anti-Sune corner orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play Anti-Sune corner orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="corner-label">Fish</span>
                 </div>
                 <div class="corner-case">
-                  <img class="diagram face" src="diagrams/corner-orient-solved.svg" alt="Solved corner orientation">
+                  <img
+                    class="diagram face"
+                    src="diagrams/corner-orient-solved.svg"
+                    alt="Solved corner orientation"
+                  />
                   <span class="corner-label">Done</span>
                 </div>
                 <div class="corner-case">
-                  <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-hammer-u">
-                    <img class="diagram face" src="diagrams/corner-orient-u.svg" alt="U corner orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play U corner orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="R U R' U R U2 R'"
+                    data-facelets-key="ocll-hammer-u"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/corner-orient-u.svg"
+                      alt="U corner orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play U corner orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="corner-label">Hammer</span>
                 </div>
                 <div class="corner-case">
-                  <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-cross-pi">
-                    <img class="diagram face" src="diagrams/corner-orient-pi.svg" alt="Pi corner orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play Pi corner orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="R U R' U R U2 R'"
+                    data-facelets-key="ocll-cross-pi"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/corner-orient-pi.svg"
+                      alt="Pi corner orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play Pi corner orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="corner-label">Cross</span>
                 </div>
                 <div class="corner-case">
-                  <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-double-fish">
-                    <img class="diagram face" src="diagrams/corner-orient-l.svg" alt="L corner orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play L corner orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="R U R' U R U2 R'"
+                    data-facelets-key="ocll-double-fish"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/corner-orient-l.svg"
+                      alt="L corner orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play L corner orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="corner-label">Double fish</span>
                 </div>
                 <div class="corner-case">
-                  <span class="cube-player face" data-move="R U R' U R U2 R'" data-facelets-key="ocll-cross-h">
-                    <img class="diagram face" src="diagrams/corner-orient-h.svg" alt="H corner orientation case">
-                    <button class="play-overlay" type="button" aria-label="Play H corner orientation"></button>
-                    <button class="close-player" type="button" aria-label="Close player">×</button>
+                  <span
+                    class="cube-player face"
+                    data-move="R U R' U R U2 R'"
+                    data-facelets-key="ocll-cross-h"
+                  >
+                    <img
+                      class="diagram face"
+                      src="diagrams/corner-orient-h.svg"
+                      alt="H corner orientation case"
+                    />
+                    <button
+                      class="play-overlay"
+                      type="button"
+                      aria-label="Play H corner orientation"
+                    ></button>
+                    <button
+                      class="close-player"
+                      type="button"
+                      aria-label="Close player"
+                    >
+                      ×
+                    </button>
                     <span class="animcube-target" aria-hidden="true"></span>
                   </span>
                   <span class="corner-label">Cross</span>
@@ -1229,7 +1557,9 @@
               </div>
               <div>
                 <p class="algo">R U R' U R U2 R'</p>
-                <p class="note">(Right kick, right trigger, double right kick)</p>
+                <p class="note">
+                  (Right kick, right trigger, double right kick)
+                </p>
               </div>
             </div>
           </section>
@@ -1239,10 +1569,28 @@
             <div>
               <h3>Position Corners</h3>
               <div class="row">
-                <span class="cube-player face" data-move="R U2 R' U' R U2 L' U R' U' L" data-facelets-key="corner-position">
-                  <img class="diagram face" src="diagrams/corner-position.svg" alt="Corner positioning diagram">
-                  <button class="play-overlay" type="button" aria-label="Play R U2 R' U' R U2 L' U R' U' L"></button>
-                  <button class="close-player" type="button" aria-label="Close player">×</button>
+                <span
+                  class="cube-player face"
+                  data-move="R U2 R' U' R U2 L' U R' U' L"
+                  data-facelets-key="corner-position"
+                >
+                  <img
+                    class="diagram face"
+                    src="diagrams/corner-position.svg"
+                    alt="Corner positioning diagram"
+                  />
+                  <button
+                    class="play-overlay"
+                    type="button"
+                    aria-label="Play R U2 R' U' R U2 L' U R' U' L"
+                  ></button>
+                  <button
+                    class="close-player"
+                    type="button"
+                    aria-label="Close player"
+                  >
+                    ×
+                  </button>
                   <span class="animcube-target" aria-hidden="true"></span>
                 </span>
                 <div>
@@ -1257,10 +1605,28 @@
             <div>
               <h3>Position Edges</h3>
               <div class="row">
-                <span class="cube-player face" data-move="F2 U M' U2 M U F2" data-facelets-key="edge-position">
-                  <img class="diagram face" src="diagrams/edge-position.svg" alt="Edge positioning cycle diagram">
-                  <button class="play-overlay" type="button" aria-label="Play F2 U M' U2 M U F2"></button>
-                  <button class="close-player" type="button" aria-label="Close player">×</button>
+                <span
+                  class="cube-player face"
+                  data-move="F2 U M' U2 M U F2"
+                  data-facelets-key="edge-position"
+                >
+                  <img
+                    class="diagram face"
+                    src="diagrams/edge-position.svg"
+                    alt="Edge positioning cycle diagram"
+                  />
+                  <button
+                    class="play-overlay"
+                    type="button"
+                    aria-label="Play F2 U M' U2 M U F2"
+                  ></button>
+                  <button
+                    class="close-player"
+                    type="button"
+                    aria-label="Close player"
+                  >
+                    ×
+                  </button>
                   <span class="animcube-target" aria-hidden="true"></span>
                 </span>
                 <p class="algo">F2 U M' U2 M U F2</p>
@@ -1268,7 +1634,6 @@
             </div>
           </section>
         </div>
-
       </section>
     </main>
     <script>
@@ -1320,122 +1685,173 @@
       }
 
       const playerFacelets = new Map([
-        ["R U R'", facelets({
-          U: "....y....",
-          D: ".w.wwwww.",
-          F: "....bb..b",
-          B: "....gg...",
-          L: "....o..o.",
-          R: "..r.rr...",
-        })],
-        ["L' U' L", facelets({
-          U: "....y....",
-          D: "ww.www.w.",
-          F: "..r.rr...",
-          B: "....oo...",
-          L: "....b.bb.",
-          R: "....gg...",
-        })],
-        ["R U2 R' U' R U R'", facelets({
-          U: "....y....",
-          D: ".w.wwwww.",
-          F: "....bb..b",
-          B: "....gg...",
-          L: "....o..o.",
-          R: "..r.rr...",
-        })],
-        ["U R U R' y U' L' U' L", facelets({
-          U: "....y....",
-          D: "wwwwwwwww",
-          F: ".rr.rr..r",
-          B: "..o.oo..o",
-          L: "...bb.bbb",
-          R: "..g.gg..g",
-        })],
-        ["U' L' U' L y' U R U R'", facelets({
-          U: "....y....",
-          D: "wwwwwwwww",
-          F: "..o.oo.oo",
-          B: "..r.rr..r",
-          L: "...gg.ggg",
-          R: ".bb.bb..b",
-        })],
-        ["oll-dot", facelets({
-          D: "wwwwwwwww",
-          U: ".y..yy...",
-          F: ".oo.oo.oo",
-          B: ".rryrr.rr",
-          L: ".y.gggggg",
-          R: ".bb.bb.bb",
-        })],
-        ["oll-j", facelets({
-          D: "wwwwwwwww",
-          U: "...yyy...",
-          F: ".ooyoo.oo",
-          B: ".rryrr.rr",
-          L: "...gggggg",
-          R: ".bb.bb.bb",
-        })],
-        ["oll-bar", facelets({
-          D: "wwwwwwwww",
-          U: ".y.yyy.y.",
-          F: ".oo.oo.oo",
-          B: ".rr.rr.rr",
-          L: "...gggggg",
-          R: ".bb.bb.bb",
-        })],
-        ["ocll-fish-sune", facelets({
-          D: "wwwwwwwww",
-          U: ".y.yyyyy.",
-          B: "..y......",
-          L: "..y......",
-          R: "......y..",
-        })],
-        ["ocll-fish-anti", facelets({
-          D: "wwwwwwwww",
-          U: ".y.yyy.yy",
-          B: "y........",
-          L: "......y..",
-          R: "..y......",
-        })],
-        ["ocll-cross-h", facelets({
-          D: "wwwwwwwww",
-          U: ".y.yyy.y.",
-          F: "y.......y",
-          B: "y.y......",
-        })],
-        ["ocll-cross-pi", facelets({
-          D: "wwwwwwwww",
-          U: ".y.yyy.y.",
-          L: "..y.....y",
-          R: "..y...y..",
-        })],
-        ["ocll-hammer-t", facelets({
-          D: "wwwwwwwww",
-          U: "yyyyyy.y.",
-          F: "......y..",
-          L: "......y..",
-        })],
-        ["ocll-hammer-u", facelets({
-          D: "wwwwwwwww",
-          U: ".y.yyyyyy",
-          L: "..y......",
-          R: "..y......",
-        })],
-        ["ocll-double-fish", facelets({
-          D: "wwwwwwwww",
-          U: "yy.yyy.yy",
-          B: "..y......",
-          F: "......y..",
-        })],
-        ["corner-position", facelets({
-          D: "wwwwwwwww",
-          U: "yyyyyyyyy",
-        })],
-        ["edge-position", facelets({
-          D: "wwwwwwwww",
-          U: "yyyyyyyyy",
-        })],
+        [
+          "R U R'",
+          facelets({
+            U: "....y....",
+            D: ".w.wwwww.",
+            F: "....bb..b",
+            B: "....gg...",
+            L: "....o..o.",
+            R: "..r.rr...",
+          }),
+        ],
+        [
+          "L' U' L",
+          facelets({
+            U: "....y....",
+            D: "ww.www.w.",
+            F: "..r.rr...",
+            B: "....oo...",
+            L: "....b.bb.",
+            R: "....gg...",
+          }),
+        ],
+        [
+          "R U2 R' U' R U R'",
+          facelets({
+            U: "....y....",
+            D: ".w.wwwww.",
+            F: "....bb..b",
+            B: "....gg...",
+            L: "....o..o.",
+            R: "..r.rr...",
+          }),
+        ],
+        [
+          "U R U R' y U' L' U' L",
+          facelets({
+            U: "....y....",
+            D: "wwwwwwwww",
+            F: ".rr.rr..r",
+            B: "..o.oo..o",
+            L: "...bb.bbb",
+            R: "..g.gg..g",
+          }),
+        ],
+        [
+          "U' L' U' L y' U R U R'",
+          facelets({
+            U: "....y....",
+            D: "wwwwwwwww",
+            F: "..o.oo.oo",
+            B: "..r.rr..r",
+            L: "...gg.ggg",
+            R: ".bb.bb..b",
+          }),
+        ],
+        [
+          "oll-dot",
+          facelets({
+            D: "wwwwwwwww",
+            U: ".y..yy...",
+            F: ".oo.oo.oo",
+            B: ".rryrr.rr",
+            L: ".y.gggggg",
+            R: ".bb.bb.bb",
+          }),
+        ],
+        [
+          "oll-j",
+          facelets({
+            D: "wwwwwwwww",
+            U: "...yyy...",
+            F: ".ooyoo.oo",
+            B: ".rryrr.rr",
+            L: "...gggggg",
+            R: ".bb.bb.bb",
+          }),
+        ],
+        [
+          "oll-bar",
+          facelets({
+            D: "wwwwwwwww",
+            U: ".y.yyy.y.",
+            F: ".oo.oo.oo",
+            B: ".rr.rr.rr",
+            L: "...gggggg",
+            R: ".bb.bb.bb",
+          }),
+        ],
+        [
+          "ocll-fish-sune",
+          facelets({
+            D: "wwwwwwwww",
+            U: ".y.yyyyy.",
+            B: "..y......",
+            L: "..y......",
+            R: "......y..",
+          }),
+        ],
+        [
+          "ocll-fish-anti",
+          facelets({
+            D: "wwwwwwwww",
+            U: ".y.yyy.yy",
+            B: "y........",
+            L: "......y..",
+            R: "..y......",
+          }),
+        ],
+        [
+          "ocll-cross-h",
+          facelets({
+            D: "wwwwwwwww",
+            U: ".y.yyy.y.",
+            F: "y.......y",
+            B: "y.y......",
+          }),
+        ],
+        [
+          "ocll-cross-pi",
+          facelets({
+            D: "wwwwwwwww",
+            U: ".y.yyy.y.",
+            L: "..y.....y",
+            R: "..y...y..",
+          }),
+        ],
+        [
+          "ocll-hammer-t",
+          facelets({
+            D: "wwwwwwwww",
+            U: "yyyyyy.y.",
+            F: "......y..",
+            L: "......y..",
+          }),
+        ],
+        [
+          "ocll-hammer-u",
+          facelets({
+            D: "wwwwwwwww",
+            U: ".y.yyyyyy",
+            L: "..y......",
+            R: "..y......",
+          }),
+        ],
+        [
+          "ocll-double-fish",
+          facelets({
+            D: "wwwwwwwww",
+            U: "yy.yyy.yy",
+            B: "..y......",
+            F: "......y..",
+          }),
+        ],
+        [
+          "corner-position",
+          facelets({
+            D: "wwwwwwwww",
+            U: "yyyyyyyyy",
+          }),
+        ],
+        [
+          "edge-position",
+          facelets({
+            D: "wwwwwwwww",
+            U: "yyyyyyyyy",
+          }),
+        ],
       ]);
 
       function resetPlayer(player) {
@@ -1469,9 +1885,15 @@
         player.classList.add("is-playing");
         activePlayer = player;
 
-        const faceletMask = playerFacelets.get(player.dataset.faceletsKey) || playerFacelets.get(move);
-        const faceletParam = faceletMask ? `&facelets=${encodeURIComponent(faceletMask)}` : "";
-        window.AnimCube3(`id=${id}&move=${encodeURIComponent(move)}${faceletParam}&${playerParams.join("&")}`);
+        const faceletMask =
+          playerFacelets.get(player.dataset.faceletsKey) ||
+          playerFacelets.get(move);
+        const faceletParam = faceletMask
+          ? `&facelets=${encodeURIComponent(faceletMask)}`
+          : "";
+        window.AnimCube3(
+          `id=${id}&move=${encodeURIComponent(move)}${faceletParam}&${playerParams.join("&")}`,
+        );
       }
 
       document.querySelectorAll(".play-overlay").forEach((button) => {
