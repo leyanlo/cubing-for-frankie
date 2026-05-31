@@ -404,6 +404,14 @@ await mkdir(outDir, { recursive: true });
 
 const selectedFiles = new Set(process.argv.slice(2));
 const allFiles = { ...cubeFiles, ...faceFiles };
+const unknownFiles = [...selectedFiles].filter((name) => !(name in allFiles));
+
+if (unknownFiles.length > 0) {
+  console.error(`Unknown diagram file(s): ${unknownFiles.join(", ")}`);
+  console.error(`Available files: ${Object.keys(allFiles).join(", ")}`);
+  process.exit(1);
+}
+
 const filesToWrite =
   selectedFiles.size > 0
     ? Object.fromEntries(
