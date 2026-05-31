@@ -286,20 +286,6 @@
         border-radius: 0.08in;
       }
 
-      @media (hover: hover) and (pointer: fine) {
-        .play-overlay {
-          opacity: 0;
-          pointer-events: none;
-          transition: opacity 140ms ease;
-        }
-
-        .cube-player:hover .play-overlay,
-        .cube-player:focus-within .play-overlay {
-          opacity: 1;
-          pointer-events: auto;
-        }
-      }
-
       .player-dialog {
         width: min(92vw, 6.4in);
         max-width: 100%;
