@@ -337,28 +337,28 @@ const faceFiles = {
   }),
   "corner-orient-antisune.svg": faceSvg({
     title: "Corner orientation Anti-Sune case",
-    cells: [n, y, n, y, y, y, n, y, y],
-    marks: sideMarks(["tlTop", "trRight", "blLeft"]),
+    cells: [n, y, n, y, y, y, y, y, n],
+    marks: sideMarks(["tlTop", "trRight", "brBottom"]),
   }),
   "corner-orient-h.svg": faceSvg({
     title: "Corner orientation H case",
     cells: [n, y, n, y, y, y, n, y, n],
-    marks: sideMarks(["tlTop", "trTop", "brBottom", "blBottom"]),
+    marks: sideMarks(["tlLeft", "trRight", "brRight", "blLeft"]),
   }),
   "corner-orient-pi.svg": faceSvg({
     title: "Corner orientation Pi case",
     cells: [n, y, n, y, y, y, n, y, n],
-    marks: sideMarks(["tlLeft", "trRight", "brRight", "blLeft"]),
+    marks: sideMarks(["tlLeft", "trTop", "brBottom", "blLeft"]),
   }),
   "corner-orient-t.svg": faceSvg({
     title: "Corner orientation T case",
-    cells: [y, y, y, y, y, y, n, y, n],
-    marks: sideMarks(["brRight", "blLeft"]),
+    cells: [n, y, y, y, y, y, n, y, y],
+    marks: sideMarks(["tlTop", "blBottom"]),
   }),
   "corner-orient-u.svg": faceSvg({
     title: "Corner orientation U case",
-    cells: [n, y, n, y, y, y, y, y, y],
-    marks: sideMarks(["tlTop", "trTop"]),
+    cells: [y, y, y, y, y, y, n, y, n],
+    marks: sideMarks(["blBottom", "brBottom"]),
   }),
   "corner-orient-l.svg": faceSvg({
     title: "Corner orientation L case",
