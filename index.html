@@ -928,6 +928,65 @@
         }
       }
 
+      @media screen and (prefers-color-scheme: dark) {
+        html,
+        body {
+          color-scheme: dark;
+          background: #10141a;
+          color: #edf2f7;
+        }
+
+        .sheet {
+          background: #171c24;
+          box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.42);
+        }
+
+        .sheet-header {
+          border-bottom-color: #d8e0ea;
+        }
+
+        .number {
+          border-color: #d8e0ea;
+        }
+
+        .notation {
+          border-color: #3a4655;
+          background: #202733;
+          color: #cbd5e1;
+        }
+
+        .notation strong {
+          color: #f8fafc;
+        }
+
+        .note,
+        .corner-label,
+        .edge-label {
+          color: #cbd5e1;
+        }
+
+        .corner-case {
+          background: #171c24;
+        }
+
+        .arrow,
+        .corner-flow-arrow {
+          color: #8fb0ff;
+        }
+
+        .print-button {
+          border-color: rgba(255, 255, 255, 0.18);
+          background: rgba(237, 242, 247, 0.12);
+          color: #f8fafc;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.38);
+        }
+
+        .print-button:hover,
+        .print-button:focus-visible {
+          background: rgba(143, 176, 255, 0.28);
+        }
+      }
+
       @media print {
         html,
         body {
@@ -1565,7 +1624,7 @@
             </div>
           </section>
 
-          <section class="step">
+          <section class="step extra-bottom">
             <div class="number">3</div>
             <div>
               <h3>Position Corners</h3>
@@ -1638,24 +1697,42 @@
       </section>
     </main>
     <script>
-      const playerParams = [
+      const playerBaseParams = [
         "buttonbar=1",
         "buttonheight=12",
         "sign=1",
         "movetext=5",
         "textsize=10",
-        "bgcolor=ffffff",
-        "butbgcolor=f7f9fb",
-        "slidercolor=3151ad",
-        "troughcolor=d8deea",
-        "cubecolor=20252b",
         "speed=8",
         "doublespeed=12",
         "snap=1",
         "colorscheme=ywbgor",
       ];
 
+      const lightPlayerParams = [
+        "bgcolor=ffffff",
+        "butbgcolor=f7f9fb",
+        "slidercolor=3151ad",
+        "troughcolor=d8deea",
+        "cubecolor=20252b",
+      ];
+
+      const darkPlayerParams = [
+        "bgcolor=171c24",
+        "butbgcolor=202733",
+        "slidercolor=8fb0ff",
+        "troughcolor=3a4655",
+        "cubecolor=0b0f14",
+      ];
+
       let activePlayer = null;
+
+      function playerThemeParams() {
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        return prefersDark ? darkPlayerParams : lightPlayerParams;
+      }
 
       function arrowSvg(width = 24) {
         const shaftLength = width - 10;
@@ -1912,7 +1989,10 @@
           ? `&facelets=${encodeURIComponent(faceletMask)}`
           : "";
         window.AnimCube3(
-          `id=${id}&move=${encodeURIComponent(move)}${faceletParam}&${playerParams.join("&")}`,
+          `id=${id}&move=${encodeURIComponent(move)}${faceletParam}&${[
+            ...playerBaseParams,
+            ...playerThemeParams(),
+          ].join("&")}`,
         );
       }
 
