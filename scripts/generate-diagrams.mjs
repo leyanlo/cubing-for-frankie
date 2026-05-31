@@ -378,7 +378,7 @@ const faceFiles = {
   "corner-orient-l.svg": faceSvg({
     title: "Corner orientation L case",
     cells: [y, y, n, y, y, y, n, y, y],
-    marks: sideMarks(["trTop", "blBottom"]),
+    marks: sideMarks(["trRight", "blBottom"]),
   }),
   "corner-orient-solved.svg": faceSvg({
     title: "Solved corner orientation case",
